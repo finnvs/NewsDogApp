@@ -83,15 +83,16 @@ namespace Newsdog.Helpers
                 try 
                 { 
                     return new SimpleNewsInfo(title.InnerText, description.InnerText, link.InnerText, img.InnerText, pubDate.InnerText);
-                }
+            }
                 catch (Exception ex)
-                {
+            {
                     // log error og stacktrace, output strings in any case
                     string msg = ex.Message;
                     string stacktrace = ex.StackTrace;
                     return new SimpleNewsInfo("Error", ex.Message,"Error", img.InnerText, "Error");
                 }
             }
+
             return newsList;
         }   
 

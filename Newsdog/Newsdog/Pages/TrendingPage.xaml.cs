@@ -69,7 +69,7 @@ namespace Newsdog.Pages
 
         private void LoadNewsCnn()
         {
-            newsListView.IsRefreshing = true;
+            newsListView.IsRefreshing = true;            
             var news = NewsHelper.GetSimpleNewsCnn();
             this.BindingContext = news;
             newsListView.IsRefreshing = false;
